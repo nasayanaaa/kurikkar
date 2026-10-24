@@ -94,7 +94,7 @@ function bundleCost(f,count){let sum=Z();for(let i=0;i<count;i++)sum=add(sum,fco
 function maxAffordable(f,currency){let sum=Z(),n=0;for(;n<10000;n++){let next=add(sum,fcost(f,n+1));if(cmp(next,currency)>0)break;sum=next}return {n,cost:sum}}
 function clickStep(lv){return num(2+Math.max(0,lv)*0.75)}
 function clickStage(lv){return lv<5?1:lv<10?2:lv<15?3:lv<20?4:5}
-function ccost(){return mul(num(50),powBig(num(10),s.clickLv))}
+function ccost(){const lv=num(Math.max(0,Number.isFinite(s.clickLv)?s.clickLv:0));return add(num(50),add(mul(num(50),powBig(lv,2)),mul(num(5),powBig(lv,3))))}
 function dcost(){return p10(5+s.digits*3)}
 function rcost(r){return mul(r.base,powBig(num(2.7),s.res[r.id]))}
 function prod(){if(s.eventType==="quiet"&&Date.now()<s.eventUntil)return Z();let x=Z();facilities.forEach(f=>{if(!f.shard)x=add(x,mul(f.power,num(s.fac[f.id]||0)))});x=mul(x,p10(s.layer));x=mul(x,num(1+(s.res.auto||0)*.2));x=mul(x,num(1+(s.skills?.production||0)*.12+(s.skills?.deepProduction||0)*.25+(s.starUp||0)*.1));x=mul(x,add(num(1),mul(s.crystal,num(.02))));if(s.eventType==="surge"&&Date.now()<s.eventUntil)x=mul(x,num(3));return x}
