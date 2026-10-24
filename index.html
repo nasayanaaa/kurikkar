@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>無限虚構機関 ∞ HARD</title>
+<style>
+:root{color-scheme:dark;--bg:#090b15;--p:#141b2e;--l:#303d5d;--t:#edf2ff;--m:#9eaccb;--c:#7cf1ff;--v:#c5a5ff;--g:#ffe39b}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#29234e,#090b15 65%);color:var(--t);font:15px/1.5 system-ui,-apple-system,sans-serif}main{max-width:1080px;margin:auto;padding:20px 14px 50px}header{text-align:center;padding:12px 0 20px}.eyebrow{letter-spacing:.2em;color:var(--c);font-size:.75rem}h1{font-size:clamp(1.7rem,5vw,2.6rem);margin:8px 0}.muted,.stat-label,.stat-note{color:var(--m);font-size:.83rem}.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-bottom:12px}.panel{background:linear-gradient(145deg,#171e34,#0e1425);border:1px solid var(--l);border-radius:15px;padding:15px;box-shadow:0 8px 25px #0003}.stat-value{font-size:clamp(1.05rem,3.5vw,1.65rem);font-weight:850;overflow-wrap:anywhere}.grid,.two{display:grid;grid-template-columns:1fr 1.1fr;gap:12px}.two{grid-template-columns:1fr 1fr}.section{margin-top:12px}h2{font-size:1.05rem;margin:0}h3{font-size:.95rem;margin:0 0 6px}.head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}.tag{border:1px solid #4a5b80;border-radius:99px;padding:2px 7px;color:var(--v);font-size:.72rem}button{font:inherit;color:var(--t);cursor:pointer;border:1px solid #40527b;border-radius:10px;padding:10px 12px;background:#243454}button:hover:not(:disabled){border-color:var(--c);background:#30456e}button:disabled{opacity:.38;cursor:not-allowed}.primary{width:100%;font-weight:800;background:linear-gradient(100deg,#126b91,#6045a0);border-color:var(--c)}.core{min-height:285px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.orb{width:132px;height:132px;border-radius:50%;margin:14px auto 17px;border:1px solid #a4f5ff;background:radial-gradient(circle at 33% 27%,#fff 0,#8bf8ff 6%,#377fda 29%,#5b39b0 55%,#11172d 73%);box-shadow:0 0 28px #71eaff77,inset 0 0 25px #fff6}.orb:active{transform:scale(.94)}.shop,.list{display:grid;gap:8px}.tree-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}.tree-branch{border:1px solid #354568;border-radius:13px;padding:10px;background:#10172a;min-width:0}.tree-branch h3{text-align:center;color:var(--c);margin:2px 0 10px}.tree-child{margin-top:8px;padding-top:10px;border-top:2px solid #6556a1;position:relative}.tree-child:before{content:"↳ 前提スキル";display:block;color:var(--v);font-size:.72rem;margin-bottom:6px}.tree-branch .item{grid-template-columns:minmax(0,1fr);}.tree-branch .item button{width:100%}.facility-scroll{max-height:62vh;overflow-y:auto;padding-right:4px;overscroll-behavior:contain}.scene{display:none}.scene.active{display:block}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 12px}.tabs button{padding:10px 6px}.tabs button.active{border-color:var(--c);background:linear-gradient(100deg,#126b91,#6045a0);box-shadow:0 0 14px #71eaff33}.event-panel{transition:background .18s,border-color .18s,box-shadow .18s}body.event-active-surge{background:radial-gradient(ellipse at top,#58331c,#090b15 68%)}body.event-active-echo{background:radial-gradient(ellipse at top,#4c1d4a,#090b15 68%)}body.event-active-shards{background:radial-gradient(ellipse at top,#174b36,#090b15 68%)}body.event-active-quiet{background:radial-gradient(ellipse at top,#202d62,#090b15 68%)}body.event-active-surge .orb{box-shadow:0 0 36px #ffbd58aa,inset 0 0 25px #fff6}body.event-active-echo .orb{box-shadow:0 0 36px #ff73d2aa,inset 0 0 25px #fff6}body.event-active-shards .orb{box-shadow:0 0 36px #8effb0aa,inset 0 0 25px #fff6}body.event-active-quiet .orb{box-shadow:0 0 36px #9ba8ffaa,inset 0 0 25px #fff6}.event-active-surge .event-panel{border-color:#ffbd58;background:linear-gradient(135deg,#422715,#21162b);box-shadow:0 0 24px #ff9c3544}.event-active-echo .event-panel{border-color:#ff73d2;background:linear-gradient(135deg,#431c43,#171b38);box-shadow:0 0 24px #ff73d244}.event-active-shards .event-panel{border-color:#8effb0;background:linear-gradient(135deg,#123d32,#171b38);box-shadow:0 0 24px #8effb044}.event-active-quiet .event-panel{border-color:#9ba8ff;background:linear-gradient(135deg,#1d2850,#111727);box-shadow:0 0 24px #9ba8ff33}.event-active-surge .event-name{color:#ffbd58}.event-active-echo .event-name{color:#ff73d2}.event-active-shards .event-name{color:#8effb0}.event-active-quiet .event-name{color:#aab8ff}.qty-control{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}.qty-control span{color:var(--m);font-size:.85rem}.qty-control button{padding:7px 10px}.qty-control button.active{border-color:var(--c);background:#30456e}.scene-title{margin:0 0 10px;font-size:1.2rem}.item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px;border:1px solid #283552;border-radius:11px;background:#0a1020}.item p{font-size:.82rem;color:var(--m);margin:3px 0}.price{font-size:.82rem;color:var(--c)}.notice{border:1px solid #6958a5;background:#211b3a;padding:12px;border-radius:11px}.row{display:flex;gap:8px;flex-wrap:wrap}.row button{flex:1}.log{max-height:150px;overflow:auto;color:var(--m);font-size:.83rem}.log div{padding:5px 0;border-bottom:1px solid #252e45}.achievement.unlocked{border-color:#7c7146;background:#241f17}.achievement.unlocked strong{color:var(--g)}.danger{border-color:#8b4c63;background:#462238}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);padding:10px 15px;border-radius:99px;border:1px solid var(--c);background:#14253e;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center}.toast.show{opacity:1}.meter{height:7px;background:#242d45;border-radius:99px;overflow:hidden;margin-top:7px}.meter span{display:block;height:100%;background:linear-gradient(90deg,var(--c),var(--v));width:0}
+@media(max-width:820px){.tree-columns{grid-template-columns:1fr}.tree-branch .item{grid-template-columns:minmax(0,1fr) auto}.tree-branch .item button{width:auto}}@media(max-width:720px){.stats{grid-template-columns:1fr 1fr}.grid,.two{grid-template-columns:1fr}.core{min-height:250px}.tabs{grid-template-columns:repeat(2,1fr)}.facility-scroll{max-height:58vh}}
+</style></head><body><main>
+<header><div class="eyebrow">INFINITE FICTION ENGINE / HARD MODE</div><h1>無限虚構機関 ∞</h1><p class="muted">分岐する転生スキル、20種の施設、Cookie Clickerを参考にした購入ごとの価格上昇、最大1000段階の巨大数単位。成長の壁を越えていく。</p></header>
+<section class="stats">
+<div class="panel"><div class="stat-label">虚空エネルギー</div><div class="stat-value" id="energy">0</div><div class="stat-note" id="rate">+0 / 秒</div></div>
+<div class="panel"><div class="stat-label">転生結晶</div><div class="stat-value" id="crystal">0</div><div class="stat-note">永続ボーナス</div></div>
+<div class="panel"><div class="stat-label">虚数片</div><div class="stat-value" id="shard">0</div><div class="stat-note">研究・上位施設用</div></div>
+<div class="panel" id="stardustStat" style="display:none"><div class="stat-label">星屑</div><div class="stat-value" id="stardust">0</div><div class="stat-note">第5転生以降の上位通貨</div></div>
+<div class="panel"><div class="stat-label">解放済み桁</div><div class="stat-value" id="digits">1 桁</div><div class="stat-note" id="layer">第0階層</div></div>
+</section>
+<nav class="tabs" aria-label="ゲーム画面">
+<button class="active" data-tab="coreScene">コア・施設</button><button data-tab="growthScene">成長・研究</button><button data-tab="cycleScene">転生・現象</button><button data-tab="recordScene">実績・記録</button>
+</nav>
+<section class="scene active" id="coreScene">
+<div class="grid">
+<section class="panel core"><h2>虚空コア</h2><button class="orb" id="orb" aria-label="エネルギーを集める"></button><button class="primary" id="clickBtn">現実を叩く +1</button><p class="muted" id="clickInfo">クリック強化は購入ごとに費用が15%上昇し、節目レベルで出力が2倍になる。</p></section>
+<section class="panel"><div class="head"><h2 id="shopHeading">生産施設</h2><span class="tag">表示切替</span></div><div class="row" style="margin-bottom:10px"><button id="showFacilities" class="active">施設</button><button id="showClick">クリック出力</button></div><div class="qty-control"><span>購入数</span><div id="qtyButtons" class="row"><button class="active" data-qty="1">1個</button><button data-qty="10">10個</button><button data-qty="25">25個</button><button data-qty="100">100個</button><button data-qty="max">最大</button></div></div><div class="shop facility-scroll" id="shop"></div><div class="shop" id="clickShop" style="display:none"></div></section>
+</div>
+</section>
+<section class="scene" id="growthScene">
+<h2 class="scene-title">成長・研究</h2>
+<section class="panel section"><div class="head"><h2>クリック成長の仕様</h2><span class="tag" id="clickStageTag">第1段階</span></div><p class="muted" id="clickStageInfo">クリック出力は施設と切り替えて強化できる。費用は毎回1.15倍になり、Lv.10・25・50・100…で出力が2倍になる。</p></section>
+<section class="panel section"><div class="head"><h2>桁の研究室</h2><span class="tag">数値の天井を拡張</span></div><p class="muted">桁を購入すると数値の成長をさらに進められる。解放費用は段階ごとに急上昇する。</p><div id="digitShop" class="shop"></div></section>
+<section class="panel section"><div class="head"><h2>研究ツリー</h2><span class="muted">虚数片で恒久強化</span></div><div id="research" class="shop"></div></section>
+<section class="panel section"><div class="head"><h2>転生スキルツリー</h2><span class="tag" id="skillUnlockTag">転生1回で解放</span></div><p class="muted">転生結晶を使って永続スキルを取得する。各ルートは独立して成長し、上位ノードは転生回数で解放される。</p><div id="skillTree" class="shop"></div></section>
+</section>
+<section class="scene" id="cycleScene">
+<section class="panel section"><div class="head"><h2>輪廻の解放記録</h2><span class="tag" id="milestoneTag">転生 0 回</span></div><p class="muted">転生回数に応じて、世界の新しい仕組みが解放される。</p><div id="milestones" class="shop"></div><div id="starShop" class="shop section" style="display:none"></div></section>
+<section class="two section">
+<div class="panel"><div class="head"><h2>転生・階層突破</h2><span class="tag">周回型成長</span></div><p class="muted">転生するとエネルギーと施設を失う代わりに転生結晶を得る。研究・桁・階層は維持される。</p><div class="notice"><div class="muted">転生で得られる結晶</div><div class="stat-value" id="gain">+0</div><div class="muted" id="bonus">生産倍率 ×1</div></div><button class="primary" id="prestige" disabled>転生する</button><hr style="border-color:var(--l);margin:16px 0"><h3>階層突破</h3><p class="muted" id="layerReq">必要量を計算中</p><div class="row"><button id="layerBtn" disabled>次の階層へ</button><button id="shardBtn" disabled>虚数片を精製</button></div></div>
+<div class="panel"><div class="head"><h2>ランダム現象</h2><span class="tag">不定期</span></div><div class="notice event-panel" id="eventPanel"><strong id="eventName" class="event-name">静寂</strong><p class="muted" id="eventDesc">虚空は次の異常を待っている。</p><div class="muted" id="eventTimer">次の現象まで10〜20分</div></div><h3 style="margin-top:15px">研究記録</h3><div class="log" id="log"></div></div>
+</section>
+</section>
+<section class="scene" id="recordScene">
+<section class="two section">
+<div class="panel"><div class="head"><h2>実績・称号</h2><span class="tag" id="achCount">0 / 0</span></div><div class="list" id="achievements"></div></div>
+<div class="panel"><div class="head"><h2>放置報酬・セーブ</h2><span class="tag">最大24時間</span></div><p class="muted">オフライン中も生産量に応じて獲得。研究で効率を上げられる。</p><div class="stat-value" id="offline">+0</div><div class="muted" id="offlineNote">次回起動時に報酬を計算する。</div><div class="row"><button id="saveBtn">今すぐ保存</button><button id="exportBtn">セーブを書き出す</button><button id="importBtn">読み込む</button></div><button class="danger section" id="resetBtn" style="width:100%">すべて初期化</button></div>
+</section>
+</section>
+<p class="muted section">施設価格はCookie Clickerを参考に、所有数に応じて基本価格の1.15^所有数で上昇。自動保存10秒ごと。巨大数は独自の仮数・指数形式で計算。日本語単位は最大1000段階まで対応し、その先は指数表記になる。</p>
+</main><div class="toast" id="toast"></div>
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id),KEY="infiniteFictionHard_v3";
+const Z=()=>({m:0,e:0}), num=x=>{if(x&&typeof x==="object"&&"m"in x)return norm({m:+x.m,e:+x.e});x=Number(x);return x>0&&Number.isFinite(x)?norm({m:x,e:0}):Z()};
+function norm(a){if(!(a.m>0)||!Number.isFinite(a.m)||!Number.isFinite(a.e))return Z();let m=a.m,e=Math.floor(a.e);while(m>=10){m/=10;e++}while(m<1){m*=10;e--}return {m,e}}
+function add(a,b){a=num(a);b=num(b);if(!a.m)return b;if(!b.m)return a;if(a.e<b.e)[a,b]=[b,a];if(a.e-b.e>16)return a;return norm({m:a.m+b.m*Math.pow(10,b.e-a.e),e:a.e})}
+function mul(a,b){a=num(a);b=num(b);return !a.m||!b.m?Z():norm({m:a.m*b.m,e:a.e+b.e})}
+function sub(a,b){a=num(a);b=num(b);if(cmp(a,b)<=0)return Z();if(a.e-b.e>16)return a;return norm({m:a.m-b.m*Math.pow(10,b.e-a.e),e:a.e})}
+function div(a,b){a=num(a);b=num(b);return !a.m||!b.m?Z():norm({m:a.m/b.m,e:a.e-b.e})}
+function cmp(a,b){a=num(a);b=num(b);if(!a.m)return b.m?-1:0;if(!b.m)return 1;return a.e===b.e?(a.m===b.m?0:a.m>b.m?1:-1):a.e>b.e?1:-1}
+const p10=e=>e<0?Z():{m:1,e:Math.floor(e)}, small=a=>{a=num(a);return !a.m?0:a.e>300?Infinity:a.e< -300?0:a.m*10**a.e};
+const baseUnits=["","万","億","兆","京","垓","𥝱","穣","溝","澗","正","載","極","恒河沙","阿僧祇","那由他","不可思議","無量大数"];
+function unitName(i){if(i<baseUnits.length)return baseUnits[i];if(i<=1000)return "第"+i+"単位";return ""}
+function fmt(a){a=num(a);if(!a.m)return"0";if(a.e<4){const v=small(a);if(v<1000)return v.toFixed(3).replace(/\.?0+$/,"");return String(Math.floor(v))}let i=Math.floor(a.e/4),part=a.m*10**(a.e%4);if(i<=1000)return part.toFixed(2)+unitName(i)+" [10^"+a.e+"]";return a.m.toFixed(4)+" × 10^"+a.e}
+const fresh=()=>({energy:Z(),total:Z(),crystal:Z(),shard:Z(),stardust:Z(),clickPower:num(1),clickLv:0,prestiges:0,layer:0,digits:1,fac:{drone:0,lab:0,reactor:0,rift:0,forge:0,singularity:0,gate:0,archive:0,star:0,world:0,axiom:0,myth:0,metaverse:0,causality:0,omniverse:0,genesis:0,origin:0,law:0,voidstar:0,fictionalGod:0},res:{lens:0,auto:0,offline:0,alchemy:0,chaos:0},skills:{production:0,click:0,cycle:0,deepProduction:0,deepClick:0,deepCycle:0},starUp:0,ach:[],savedAt:Date.now(),eventType:"",eventUntil:0,eventCount:0,logs:[]});
+let s=fresh(),offlineEarned=Z(),last=Date.now(),eventIn=randEventInterval(),toastTimer,qty=1,shopMode="facilities",current={name:"静寂",desc:"虚空は次の異常を待っている。"};
+const facilities=[
+{id:"drone",name:"採集ドローン",desc:"毎秒 +1 エネルギー",base:num(15),scale:1.15,power:num(1)},
+{id:"lab",name:"量子研究室",desc:"毎秒 +12 エネルギー",base:num(100),scale:1.15,power:num(12)},
+{id:"reactor",name:"虚空炉心",desc:"毎秒 +120 エネルギー",base:num(1100),scale:1.15,power:num(120)},
+{id:"rift",name:"次元裂孔",desc:"毎秒 +1,200 エネルギー",base:num(12000),scale:1.15,power:num(1200)},
+{id:"forge",name:"因果鍛造炉",desc:"毎秒 +12,000 エネルギー",base:num(130000),scale:1.15,power:num(12000)},
+{id:"singularity",name:"特異点圧縮機",desc:"毎秒 +150,000 エネルギー",base:num(1400000),scale:1.15,power:num(150000)},
+{id:"gate",name:"反実在ゲート",desc:"毎秒 +2,000,000 エネルギー",base:num(2e7),scale:1.15,power:num(2e6)},
+{id:"archive",name:"無限記録庫",desc:"毎秒 +30,000,000 エネルギー",base:num(3.3e8),scale:1.15,power:num(3e7)},
+{id:"star",name:"虚構星雲炉",desc:"毎秒 +500,000,000 エネルギー",base:num(5.1e9),scale:1.15,power:num(5e8)},
+{id:"world",name:"世界線編纂機",desc:"毎秒 +8,000,000,000 エネルギー",base:num(7.5e10),scale:1.15,power:num(8e9)},
+{id:"axiom",name:"公理改竄装置",desc:"毎秒 +1 虚数片",base:num(500),scale:1.15,power:num(1),shard:true},
+{id:"myth",name:"神話生成炉",desc:"毎秒 +5 虚数片",base:num(2e4),scale:1.15,power:num(5),shard:true},
+{id:"metaverse",name:"超世界線編纂機",desc:"毎秒 +10^12 エネルギー",base:p10(17),scale:1.15,power:p10(12)},
+{id:"causality",name:"因果律炉心",desc:"毎秒 +10^15 エネルギー",base:p10(20),scale:1.15,power:p10(15)},
+{id:"omniverse",name:"全宇宙演算機",desc:"毎秒 +10^18 エネルギー",base:p10(23),scale:1.15,power:p10(18)},
+{id:"genesis",name:"創世機関",desc:"毎秒 +10^22 エネルギー",base:p10(27),scale:1.15,power:p10(22)},
+{id:"origin",name:"原初定義炉",desc:"毎秒 +10^26 エネルギー",base:p10(31),scale:1.15,power:p10(26)},
+{id:"law",name:"法則再記述機",desc:"毎秒 +10^30 エネルギー",base:p10(35),scale:1.15,power:p10(30)},
+{id:"voidstar",name:"虚無星団炉",desc:"毎秒 +10^35 エネルギー",base:p10(40),scale:1.15,power:p10(35)},
+{id:"fictionalGod",name:"幻想神生成機",desc:"毎秒 +10^40 エネルギー",base:p10(45),scale:1.15,power:p10(40)}];
+const researches=[
+{id:"lens",name:"非ユークリッド集束",desc:"クリック出力 +15% / レベル",base:num(12),max:30,req:()=>true},
+{id:"auto",name:"自律因果回路",desc:"全生産量 +20% / レベル",base:num(20),max:40,req:()=>true},
+{id:"offline",name:"時間外演算",desc:"放置効率 +10% / レベル",base:num(35),max:30,req:()=>true},
+{id:"alchemy",name:"虚数錬成",desc:"虚数片の精製量 +50% / レベル",base:num(80),max:15,req:()=>s.prestiges>0},
+{id:"chaos",name:"確率崩壊理論",desc:"現象の発生間隔を短縮",base:num(120),max:15,req:()=>s.layer>0}];
+const achievements=[
+["first","最初の歪み","総獲得10",()=>cmp(s.total,num(10))>=0],["million","桁の破壊者","総獲得100万",()=>s.total.e>=6],["prestige","輪廻の観測者","初めて転生",()=>s.prestiges>0],["layer","法則の反逆者","第1階層へ",()=>s.layer>=1],["shards","虚数の錬金術師","虚数片100",()=>cmp(s.shard,num(100))>=0],["machine","機械文明","施設25個",()=>Object.values(s.fac).reduce((a,b)=>a+b,0)>=25],["chaos","異常気象","現象10回",()=>s.eventCount>=10],["big","無量の入口","総獲得10^30",()=>s.total.e>=30],["digits","桁の開拓者","10桁解放",()=>s.digits>=10],["infinite","数字の外側","第5階層へ",()=>s.layer>=5]];
+function powBig(base,n){let out=num(1),b=num(base),k=Math.max(0,Math.floor(n));while(k>0){if(k%2)out=mul(out,b);k=Math.floor(k/2);if(k)b=mul(b,b)}return out}
+function fcost(f,n=1){return mul(f.base,powBig(num(f.scale||1.15),s.fac[f.id]+n-1))}
+function bundleCost(f,count){let sum=Z();for(let i=0;i<count;i++)sum=add(sum,fcost(f,i+1));return sum}
+function maxAffordable(f,currency){let sum=Z(),n=0;for(;n<10000;n++){let next=add(sum,fcost(f,n+1));if(cmp(next,currency)>0)break;sum=next}return {n,cost:sum}}
+function clickStep(lv){return num(0.1)}
+const clickMilestones=[10,25,50,100,250,500,1000];
+function clickStage(lv){return lv<10?1:lv<25?2:lv<50?3:lv<100?4:5}
+function nextClickMilestone(lv){return clickMilestones.find(x=>x>lv)||null}
+function ccost(){const lv=Math.max(0,Math.floor(Number.isFinite(s.clickLv)?s.clickLv:0));return mul(num(10),powBig(num(1.15),lv))}
+function dcost(){return p10(5+s.digits*3)}
+function rcost(r){return mul(r.base,powBig(num(2.7),s.res[r.id]))}
+function prod(){if(s.eventType==="quiet"&&Date.now()<s.eventUntil)return Z();let x=Z();facilities.forEach(f=>{if(!f.shard)x=add(x,mul(f.power,num(s.fac[f.id]||0)))});x=mul(x,p10(s.layer));x=mul(x,num(1+(s.res.auto||0)*.2));x=mul(x,num(1+(s.skills?.production||0)*.12+(s.skills?.deepProduction||0)*.25+(s.starUp||0)*.1));x=mul(x,add(num(1),mul(s.crystal,num(.02))));if(s.eventType==="surge"&&Date.now()<s.eventUntil)x=mul(x,num(3));return x}
+function clickGain(){if(!s.clickPower||cmp(s.clickPower,Z())<=0)s.clickPower=num(1);let x=mul(s.clickPower,num(1+s.layer));if(!x.m||!Number.isFinite(x.m)||!Number.isFinite(x.e))x=num(1);x=mul(x,powBig(num(1.15),s.res.lens));x=mul(x,num(1+(s.skills?.click||0)*.08+(s.skills?.deepClick||0)*.2));x=mul(x,add(num(1),mul(s.crystal,num(.01))));if(s.eventType==="echo"&&Date.now()<s.eventUntil)x=mul(x,num(2));return x}
+function prestigeGain(){if(s.total.e<8)return Z();let base=Math.max(0,Math.floor(Math.sqrt(10**Math.min(16,s.total.e-4))-small(s.crystal)));return num(Math.floor(base*(1+(s.skills?.cycle||0)*.15+(s.skills?.deepCycle||0)*.25)))}
+function give(x){s.energy=add(s.energy,x);s.total=add(s.total,x)}
+function log(t){s.logs.unshift("["+new Date().toLocaleTimeString("ja-JP",{hour:"2-digit",minute:"2-digit"})+"] "+t);s.logs=s.logs.slice(0,12)}
+function toast(t){$("toast").textContent=t;$("toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").classList.remove("show"),2100)}
+function item(root,title,desc,price,btn,disabled,fn){const d=document.createElement("div");d.className="item";const info=document.createElement("div"),t=document.createElement("strong"),p=document.createElement("p"),pr=document.createElement("div");t.textContent=title;p.textContent=desc;pr.className="price";pr.textContent=price;info.append(t,p,pr);const b=document.createElement("button");b.textContent=btn;b.disabled=disabled;b.onclick=fn;d.append(info,b);$(root).append(d)}
+function render(){
+$("energy").textContent=fmt(s.energy);$("stardust").textContent=fmt(s.stardust||Z());$("stardustStat").style.display=s.prestiges>=5?"block":"none";$("rate").textContent="+"+fmt(prod())+" / 秒";$("crystal").textContent=fmt(s.crystal);$("shard").textContent=fmt(s.shard);$("digits").textContent=s.digits+" 桁";$("layer").textContent="第"+s.layer+"階層 · "+(["物理法則","因果の揺らぎ","数列の墓場","無限回廊","公理の外側"][Math.min(s.layer,4)]||"記述不能領域");
+$("clickBtn").textContent="現実を叩く　+"+fmt(clickGain());$("clickInfo").textContent="現在の1クリック："+fmt(clickGain());
+$("shop").innerHTML="";facilities.forEach(f=>{let cur=f.shard?s.shard:s.energy,chosen=qty==="max"?maxAffordable(f,cur).n:qty,actual=Math.max(0,chosen),c=actual?bundleCost(f,actual):fcost(f);item("shop",f.name+" × "+s.fac[f.id],f.desc,"次の1個："+fmt(fcost(f))+" · "+(actual?"購入合計："+fmt(c):"選択数を購入不可")+(f.shard?" 虚数片":" エネルギー"),actual>1?actual+"個購入":"購入",actual<1||cmp(cur,c)<0,()=>{let n=qty==="max"?maxAffordable(f,f.shard?s.shard:s.energy).n:qty;if(n<1)return;let cost=bundleCost(f,n);if(f.shard)s.shard=sub(s.shard,cost);else s.energy=sub(s.energy,cost);s.fac[f.id]=(s.fac[f.id]||0)+n;log(f.name+"を"+n+"個建造");toast(f.name+" ×"+n);render();save()})});
+$("clickShop").innerHTML="";let c=ccost(),step=clickStep(s.clickLv),stage=clickStage(s.clickLv),milestone=nextClickMilestone(s.clickLv);$("clickStageTag").textContent="第"+stage+"段階";$("clickStageInfo").textContent="次の強化で +"+fmt(step)+"。次の節目："+(milestone?"Lv."+milestone+"でクリック出力2倍":"全節目達成");item("clickShop","クリック出力 Lv."+s.clickLv,"今回の強化：+"+fmt(step)+"。Lv.10・25・50・100・250…到達時にクリック出力が2倍。","費用 "+fmt(c)+" エネルギー","出力を強化",cmp(s.energy,c)<0,()=>{const cost=ccost();if(cmp(s.energy,cost)<0){toast("エネルギーが足りないよ");return;}const oldPower=cmp(s.clickPower,Z())>0?num(s.clickPower):num(1);const increase=clickStep(s.clickLv);let nextPower=add(oldPower,increase);const nextLv=(Number.isFinite(s.clickLv)?s.clickLv:0)+1;const milestoneHit=clickMilestones.includes(nextLv);if(milestoneHit)nextPower=mul(nextPower,num(2));if(cmp(nextPower,oldPower)<=0){toast("強化を適用できなかったよ");return;}s.energy=sub(s.energy,cost);s.clickPower=nextPower;s.clickLv=nextLv;log("クリック出力を強化（+"+fmt(increase)+(milestoneHit?"、節目ボーナス2倍":"")+"）→ "+fmt(s.clickPower));toast(milestoneHit?"節目到達！クリック出力2倍！":"クリック出力 +"+fmt(increase));render();save()});
+$("digitShop").innerHTML="";c=dcost();item("digitShop","第"+(s.digits+1)+"桁を解放","数値の成長段階を1つ追加。以降の桁ほど費用が大幅に上がる。","費用 "+fmt(c)+" エネルギー","桁を解放",cmp(s.energy,c)<0,()=>{s.energy=sub(s.energy,c);s.digits++;log(s.digits+"桁目を解放");toast("新しい桁を解放！");render();save()});
+$("research").innerHTML="";researches.forEach(r=>{let lv=s.res[r.id],c=rcost(r);item("research",r.name+" Lv."+lv+"/"+r.max,r.desc,lv>=r.max?"研究完了":"費用 "+fmt(c)+" 虚数片",lv>=r.max?"完了":"研究",!r.req()||lv>=r.max||cmp(s.shard,c)<0,()=>{s.shard=sub(s.shard,c);s.res[r.id]++;log(r.name+"を研究");render();save()})});
+const skillDefs=[
+{id:"production",name:"生産の系譜",desc:"全エネルギー生産 +12% / レベル",base:1,max:10,unlock:1,branch:"生産",parent:null,req:()=>true},
+{id:"deepProduction",name:"因果増幅核",desc:"全生産量 +25% / レベル",base:4,max:5,unlock:5,branch:"生産",parent:"production",req:()=>true},
+{id:"click",name:"打鍵の系譜",desc:"クリック出力 +8% / レベル",base:1,max:10,unlock:1,branch:"クリック",parent:null,req:()=>true},
+{id:"deepClick",name:"一撃の公理",desc:"クリック出力 +20% / レベル",base:4,max:5,unlock:5,branch:"クリック",parent:"click",req:()=>true},
+{id:"cycle",name:"輪廻の系譜",desc:"転生結晶獲得量 +15% / レベル",base:2,max:5,unlock:3,branch:"輪廻",parent:null,req:()=>true},
+{id:"deepCycle",name:"永劫回帰",desc:"転生結晶獲得量 +25% / レベル",base:8,max:5,unlock:10,branch:"輪廻",parent:"cycle",req:()=>true}
+];
+const tree=$("skillTree");tree.innerHTML="";tree.className="tree-columns";$("skillUnlockTag").textContent=s.prestiges>=1?"解放済み · 前提スキルあり":"転生1回で解放";
+[{name:"生産ルート",branch:"生産"},{name:"クリックルート",branch:"クリック"},{name:"輪廻ルート",branch:"輪廻"}].forEach(b=>{let col=document.createElement("div");col.className="tree-branch";let h=document.createElement("h3");h.textContent=b.name;col.append(h);let root=document.createElement("div");root.id="skillRoot_"+b.branch;col.append(root);let child=document.createElement("div");child.className="tree-child";child.id="skillChild_"+b.branch;col.append(child);tree.append(col)});
+skillDefs.forEach(k=>{let lv=s.skills[k.id]||0,c=mul(num(k.base),powBig(num(2.4),lv)),unlocked=s.prestiges>=k.unlock,parentLv=k.parent?(s.skills[k.parent]||0):1,canParent=parentLv>0,rootId=k.parent?"skillChild_":"skillRoot_",target=(k.parent?$(rootId+k.branch):$(rootId+k.branch));let reqText=k.unlock>1?"転生"+k.unlock+"回で解放":"";if(k.parent)reqText+=(reqText?"・":"")+"前提「"+skillDefs.find(x=>x.id===k.parent).name+"」Lv.1以上";item(target.id,k.name+" Lv."+lv+"/"+k.max,k.desc+(reqText?" · "+reqText:""),lv>=k.max?"最大レベル":"費用 "+fmt(c)+" 転生結晶",lv>=k.max?"最大":"習得",!unlocked||!canParent||lv>=k.max||cmp(s.crystal,c)<0,()=>{s.crystal=sub(s.crystal,c);s.skills[k.id]=lv+1;log("転生スキル習得："+k.name+" Lv."+(lv+1));toast(k.name+"を強化");render();save()})});
+const milestones=[
+[1,"転生研究の扉","転生スキルツリーを解放"],
+[3,"第二の輪廻","輪廻の系譜を解放"],
+[5,"星屑の発見","新通貨「星屑」と上位スキルを解放"],
+[10,"公理の外側","星屑ショップの強化上限を拡張"]
+];
+$("milestoneTag").textContent="転生 "+s.prestiges+" 回";$("milestones").innerHTML="";milestones.forEach(m=>{let done=s.prestiges>=m[0];item("milestones", "転生"+m[0]+"回："+m[1],m[2],done?"解放済み":"あと "+(m[0]-s.prestiges)+" 回",done?"解放済み":"未解放",true,()=>{})});
+$("starShop").style.display=s.prestiges>=5?"grid":"none";$("starShop").innerHTML="";if(s.prestiges>=5){let cost=mul(num(3),powBig(num(2.5),s.starUp||0)),max=s.prestiges>=10?20:10;item("starShop","星屑の生産増幅 Lv."+(s.starUp||0)+"/"+max,"全生産量 +10% / レベル。転生後も維持される上位強化。","費用 "+fmt(cost)+" 星屑","増幅",(s.starUp||0)>=max||cmp(s.stardust||Z(),cost)<0,()=>{s.stardust=sub(s.stardust||Z(),cost);s.starUp=(s.starUp||0)+1;log("星屑の生産増幅を強化");render();save()})}
+
+let pg=prestigeGain();$("gain").textContent="+"+fmt(pg)+" 結晶";$("bonus").textContent="現在の結晶："+fmt(s.crystal)+"。転生後は永続生産倍率が上昇。";$("prestige").disabled=cmp(pg,Z())<=0;
+let lr=p10(6+s.layer*3),sr=p10(4+s.layer*2);$("layerBtn").disabled=cmp(s.energy,lr)<0;$("shardBtn").disabled=cmp(s.energy,sr)<0;$("layerReq").textContent="階層突破："+fmt(lr)+" エネルギー / 虚数片精製："+fmt(sr)+" エネルギー";
+$("offline").textContent="+"+fmt(offlineEarned);$("offlineNote").textContent=cmp(offlineEarned,Z())>0?"放置報酬は加算済み。":"次回起動時に報酬を計算する。";
+document.body.classList.remove("event-active-surge","event-active-echo","event-active-shards","event-active-quiet");if(s.eventType&&Date.now()<s.eventUntil)document.body.classList.add("event-active-"+s.eventType);$("eventPanel").className="notice event-panel"+(s.eventType&&Date.now()<s.eventUntil?" active":"");$("eventName").textContent=current.name;$("eventDesc").textContent=current.desc;$("eventTimer").textContent=s.eventType&&Date.now()<s.eventUntil?"残り "+Math.floor(Math.max(0,s.eventUntil-Date.now())/60000)+"分 "+(Math.ceil(Math.max(0,s.eventUntil-Date.now())/1000)%60)+"秒":"次の現象まで "+Math.floor(Math.max(0,eventIn)/60)+"分 "+(Math.max(0,Math.ceil(eventIn))%60)+"秒";
+$("log").innerHTML="";s.logs.forEach(x=>{let d=document.createElement("div");d.textContent=x;$("log").append(d)});
+$("achievements").innerHTML="";let n=0;achievements.forEach(a=>{let done=s.ach.includes(a[0])||a[3]();if(done){n++;if(!s.ach.includes(a[0])){s.ach.push(a[0]);log("称号獲得："+a[1])}}let d=document.createElement("div");d.className="item achievement"+(done?" unlocked":"");let info=document.createElement("div"),t=document.createElement("strong"),p=document.createElement("p");t.textContent=(done?"★ ":"◇ ")+a[1];p.textContent=a[2];info.append(t,p);d.append(info);$("achievements").append(d)});$("achCount").textContent=n+" / "+achievements.length
+}
+const deck=[{id:"surge",name:"エネルギー奔流",desc:"生産量が3倍になる。"},{id:"echo",name:"クリック残響",desc:"クリック獲得量が2倍になる。"},{id:"shards",name:"虚数雨",desc:"虚数片を発見した。"},{id:"quiet",name:"因果の凪",desc:"生産が一時停止する。宇宙にも休憩は必要。"}];
+function randEventInterval(){return 600+Math.floor(Math.random()*601)}
+function randEventDuration(){return 60+Math.floor(Math.random()*61)}
+function event(){let e=deck[Math.floor(Math.random()*deck.length)];s.eventType=e.id;s.eventUntil=Date.now()+randEventDuration()*1000;s.eventCount++;current=e;if(e.id==="shards"){let n=num(1+s.layer+s.res.chaos);s.shard=add(s.shard,n);current={name:e.name,desc:"虚数片を"+fmt(n)+"個発見した。"}}if(e.id==="quiet")current={...e,desc:"生産が一時停止する。宇宙にも休憩は必要。"};log("ランダム現象："+current.name);toast("現象発生："+current.name);eventIn=randEventInterval();render()}
+function save(){try{s.savedAt=Date.now();localStorage.setItem(KEY,JSON.stringify(s))}catch(e){toast("保存失敗。セーブを書き出してね")}}
+function load(){try{let raw=localStorage.getItem(KEY);if(!raw)return;let d=JSON.parse(raw),b=fresh();s={...b,...d,energy:num(d.energy),total:num(d.total),crystal:num(d.crystal),shard:num(d.shard),stardust:num(d.stardust),clickPower:(d.clickPower&&num(d.clickPower).m>0)?num(d.clickPower):num(1),skills:{...b.skills,...(d.skills||{})},starUp:d.starUp||0,fac:{...b.fac,...d.fac},res:{...b.res,...d.res},ach:Array.isArray(d.ach)?d.ach:[],logs:Array.isArray(d.logs)?d.logs:[]};let sec=Math.min(86400,Math.max(0,(Date.now()-(+d.savedAt||Date.now()))/1000));offlineEarned=mul(mul(prod(),num(sec)),num(.25+s.res.offline*.1));if(cmp(offlineEarned,Z())>0){give(offlineEarned);log("放置報酬："+fmt(offlineEarned));setTimeout(()=>toast("おかえり！ "+fmt(offlineEarned)+" エネルギー獲得"),250)}}catch(e){s=fresh()}}
+function doPrestige(){let g=prestigeGain();if(cmp(g,Z())<=0)return;if(!confirm("転生する？ エネルギーと施設は失われ、結晶 "+fmt(g)+" を獲得。研究・桁・階層は維持される。"))return;s.crystal=add(s.crystal,g);s.prestiges++;if(s.prestiges>=5){let dust=num(1+Math.max(0,Math.floor((g.e||0)/5)));s.stardust=add(s.stardust||Z(),dust);log("星屑 +"+fmt(dust))}s.energy=Z();s.total=Z();s.clickPower=num(1);s.clickLv=0;Object.keys(s.fac).forEach(k=>s.fac[k]=0);log("転生。結晶 +"+fmt(g));render();save();toast("輪廻が始まった")}
+$("orb").onclick=$("clickBtn").onclick=()=>{give(clickGain());render();save()};
+$("prestige").onclick=doPrestige;
+$("layerBtn").onclick=()=>{let req=p10(6+s.layer*3);if(cmp(s.energy,req)<0)return;if(!confirm("階層突破する？ エネルギーの90%を失い、全生産倍率が10倍になる。"))return;s.energy=mul(s.energy,num(.1));s.layer++;s.shard=add(s.shard,num(2+s.layer));log("第"+s.layer+"階層へ突破");render();save()};
+$("shardBtn").onclick=()=>{let req=p10(4+s.layer*2);if(cmp(s.energy,req)<0)return;let gain=num(Math.max(1,Math.floor((Math.max(0,log10Safe(s.energy)-log10Safe(req))+1)*(1+s.layer)*(1+s.res.alchemy*.5))));s.energy=sub(s.energy,req);s.shard=add(s.shard,gain);log("虚数片 +"+fmt(gain));render();save()};
+function log10Safe(a){a=num(a);return a.m?a.e+Math.log10(a.m):0}
+$("saveBtn").onclick=()=>{save();toast("保存したよ")};
+$("exportBtn").onclick=()=>{save();prompt("セーブデータをコピーして保管してね。",JSON.stringify(s))};
+$("importBtn").onclick=()=>{let raw=prompt("セーブデータを貼り付けてね。現在のデータは上書きされるよ。");if(!raw)return;try{let d=JSON.parse(raw);if(!d.energy||!d.clickPower)throw Error();localStorage.setItem(KEY,raw);load();render();save();toast("読み込み完了")}catch(e){alert("セーブデータを読み込めなかった。")}};
+$("resetBtn").onclick=()=>{if(!confirm("すべての進行状況を消して最初から始める？"))return;localStorage.removeItem(KEY);s=fresh();offlineEarned=Z();render();toast("初期化したよ")};
+function log10Safe(a){a=num(a);return a.m?a.e+Math.log10(a.m):0}
+document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".scene").forEach(x=>x.classList.toggle("active",x.id===b.dataset.tab))}));
+document.querySelectorAll("[data-qty]").forEach(b=>b.addEventListener("click",()=>{qty=b.dataset.qty==="max"?"max":Number(b.dataset.qty);document.querySelectorAll("[data-qty]").forEach(x=>x.classList.toggle("active",x===b));render()}));
+function setShopMode(mode){shopMode=mode;$("shop").style.display=mode==="facilities"?"grid":"none";$("clickShop").style.display=mode==="click"?"grid":"none";$("qtyButtons").style.display=mode==="facilities"?"flex":"none";$("shopHeading").textContent=mode==="facilities"?"生産施設":"クリック出力";$("showFacilities").classList.toggle("active",mode==="facilities");$("showClick").classList.toggle("active",mode==="click")}
+$("showFacilities").onclick=()=>setShopMode("facilities");$("showClick").onclick=()=>setShopMode("click");
+load();render();setInterval(()=>{let now=Date.now(),dt=Math.min(5,(now-last)/1000);last=now;give(mul(prod(),num(dt)));if(!(s.eventType==="quiet"&&Date.now()<s.eventUntil))facilities.forEach(f=>{if(f.shard&&s.fac[f.id])s.shard=add(s.shard,mul(mul(f.power,num(s.fac[f.id])),num(dt)))});eventIn-=dt;if(eventIn<=0)event();if(s.eventType&&Date.now()>=s.eventUntil){s.eventType="";current={name:"静寂",desc:"虚空は次の異常を待っている。"}}render()},1000);setInterval(save,10000);window.addEventListener("beforeunload",save)
+})();
+</script></body></html>
